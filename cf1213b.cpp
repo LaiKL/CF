@@ -17,19 +17,14 @@ int main()
             scanf("%d",&x);
 
             if(j==0) a[j] = x, ++j;
-            /*else if(j==1)
-            {
-                if(a[0]>x) a[0]=x, k++;
-                else a[1]=x, j++;
-            }*/
+
             else{h = 0, t = j;
                 while((t-h)/2!=0)
                 {
                     if(a[h+(t-h)/2]>x) t=h+(t-h)/2;
                     else h=h+(t-h)/2;
                 }
-                /*k+=j-t, a[t]=x, j=t+1;
-printf("kk %d  ",k);*/
+
                 if(t-h==1)
                 {
                     if(a[h]<=x) k+=j-t, a[t]=x, j=t+1;
